@@ -1,0 +1,114 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%; 
+    border-top: solid var(--green) 7px;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 80%;
+    width: 80vw;
+    margin-left: 1vh;
+}
+
+.left h2 {
+    width: 100%;
+    font-family: var(--poppins);
+    font-size: 6vh;
+    font-weight: 500;
+    color: var(--green);
+    line-height: 8vh;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 3vh;
+}
+
+.tag {
+    background-color: var(--green);
+    font-family: var(--poppins);
+    font-size: 2vh;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    padding: 1vh;
+    margin-left: 1vh;
+    border-radius: 4vh;
+}
+
+.tag:first-child {
+    margin-left: 0;
+}
+
+.right {
+    width: 10vw;
+}
+
+.right ion-button {
+    --background: none;
+    --background-activated: none;
+    --background-hover: none;
+    --ripple-color: transparent;
+    width: 10vh;
+}
+
+.right ion-button ion-icon {
+    color: var(--green);
+    font-size: 4vh;
+
+}
+
+.post-author-info {
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 10vh;
+}
+
+.post-author-info .profile-picture {
+    width: 7vh;
+    height: 7vh;
+    border-radius: 8vh;
+    margin-right: 1vh;
+    margin-left: 1vh;
+    background-color: #969696;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.post-author-info span {
+    font-family: var(--poppins);
+    font-weight: 500;
+    font-size: 2.3vh;
+    color: var(--green);
+} 

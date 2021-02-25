@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start" [routerLink]="['/start']">
+      <img src="../../assets/icons/arrow-left.svg">
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+
+    <img class="logo" src="../../assets/logo-login.svg" alt="logo urban forest" />
+    <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm)">
+
+      <ion-input type="email" placeholder="E-mail" formControlName="email"></ion-input>
+
+      <div class="password-container">
+        <ion-input type="{{inputTypePassword}}" placeholder="Password" formControlName="password"></ion-input>
+        <ion-icon name="eye-outline" slot="end" *ngIf="!viewPassword" (click)="changeViewPasswordState()"></ion-icon>
+        <ion-icon name="eye-off-outline" *ngIf="viewPassword" (click)="changeViewPasswordState()"></ion-icon>
+      </div>
+
+      <ion-button type="submit" class="submit-button" [disabled]="loginForm.invalid">Entrar</ion-button>
+    </form>
+  </div>
+</ion-content>

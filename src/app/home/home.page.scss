@@ -1,0 +1,51 @@
+/*header and toolbar*/
+ion-toolbar {
+    --background: var(--primary-color-dark);
+}
+
+ion-toolbar ion-button {
+    --background: none;
+    --box-shadow: none;
+    --ripple-color: transparent;
+    --background-activated: none;
+    --background-hover: none;
+}
+
+ion-toolbar ion-button ion-icon {
+    color: var(--black);
+}
+
+/*main .container*/
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--primary-color);
+}
+
+app-page-heading {
+    height: 15vh;
+}
+
+/*post list*/
+ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+li {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 5vh;
+}
+
+app-post {
+    width: 100%;
+}
+
+ion-fab ion-fab-button {
+    --background: var(--green);
+}

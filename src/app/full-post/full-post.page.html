@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+     <ion-button slot="start" [routerLink]="['/tabs/home']">
+      <ion-icon name="home-outline"></ion-icon>
+     </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+     <app-page-heading title="post"></app-page-heading>
+     <app-post [post]="post" [postOwner]="postOwner"></app-post>
+
+     <section class="comments-container">
+        <form [formGroup]="newCommentForm" (ngSubmit)="submitNewCommentForm(newCommentForm)">
+           <ion-textarea placeholder="Insira seu comentário..." formControlName="text"></ion-textarea>
+           <ion-button type="submit">
+              <ion-icon name="send"></ion-icon>
+           </ion-button>
+        </form>
+
+        <ul class="comments">
+         <li *ngFor="let comment of comments">
+          <app-comment-item [comment]="comment"></app-comment-item>
+         </li>
+        </ul>
+     </section>
+  </div>
+</ion-content>

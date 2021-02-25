@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start">
+      <img src="../../assets/icons/arrow-left.svg">
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <app-page-heading title="busca"></app-page-heading>
+    <form>
+      <div class="search-container">
+        <ion-input type="text" placeholder="insira uma tag ou um apelido" (input)="searchInput($event)"></ion-input>
+          <ion-button type="submit"><ion-icon name="search" slot="end"></ion-icon></ion-button>
+      </div>
+    </form>
+
+    <div class="section-heading">
+      usuários
+    </div>
+    <div class="users-list">
+      <div class="users-list-item">
+        <img src="../../assets/user-pic.png" />
+        <span>Carlos Andrade</span>
+      </div>
+
+      <div class="users-list-item">
+        <img src="../../assets/user-pic.png" />
+        <span>Carlos Andrade</span>
+      </div>
+    </div>
+
+    <div class="section-heading">
+      tags
+    </div>
+    <div class="tags">
+      <div class="tag">Casa</div>
+      <div class="tag">Suculentas</div>
+      <div class="tag">Decoração</div>
+      <div class="tag">Veganismo</div>
+      <div class="tag">Cuidados</div>
+      <div class="tag">Natural</div>
+      <div class="tag">Orgânico</div>
+      <div class="tag">Vegetarianismo</div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="post-info">
+    <div class="user-info" (click)="openPostOwnerProfile()">
+      <div class="profile-picture" style="background-image: url('{{postOwner ? postOwner.profile_picture : ''}}');"></div>
+      <div class="user-info-data">
+        <span class="user-name">
+          {{postOwner ? postOwner.name : ''}}
+        </span>
+        <span class="user-nickname">
+          @{{postOwner ? postOwner.nickname : ''}}
+        </span>
+      </div>
+    </div>
+
+    <ion-button (click)="openPostOptions()">
+      <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div class="post">
+    <div class="post-title">
+      {{post.title}}
+    </div>
+    <div class="post-body">
+      {{post.text}}
+    </div>
+    <div class="post-image" style="background-image: url('{{post.media}}');"></div>
+    <div class="tags">
+      <div class="tag">Suculentas</div>
+      <div class="tag">Casa</div>
+      <div class="tag">Decoração</div>
+    </div>
+  </div>
+
+  <div class="post-bar">
+    <ion-button (click)="toggleLikePost()">
+      <ion-icon name="heart-outline" *ngIf="!heartFull"></ion-icon>
+      <ion-icon name="heart" *ngIf="heartFull"></ion-icon>
+    </ion-button>    
+    <ion-button (click)="openFullPost()">
+      <ion-icon name="chatbox-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+</div>

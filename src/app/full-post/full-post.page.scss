@@ -1,0 +1,82 @@
+/*header and toolbar*/
+ion-toolbar {
+    --background: var(--primary-color-dark);
+}
+
+ion-toolbar ion-button,
+form ion-button,
+.comment-header ion-button {
+    --background: none;
+    --box-shadow: none;
+    --ripple-color: transparent;
+    --background-activated: none;
+    --background-hover: none;
+}
+
+ion-toolbar ion-button ion-icon {
+    color: var(--black);
+}
+
+/*main .container*/
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+app-page-heading {
+    height: 15vh;
+    width: 100vw;
+}
+
+app-post {
+    width: 100vw;
+}
+
+/*.comments-container*/
+.comments-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: var(--white);
+}
+
+.comments-container form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-items: flex-start;
+    align-items: center;
+    width: 85%;
+    margin-top: 1vh;
+
+}
+
+.comments-container form ion-textarea {
+    height: 13vh;
+    background-color: #E1DDDD;
+    font-family: var(--poppins);
+    text-indent: 2vw;
+}
+
+form ion-button ion-icon {
+    color: var(--green);
+}
+
+/*comments*/
+.comments {
+    padding: 0;
+    margin: 0;
+    width: 90%;
+}
+
+.comments li {
+    width: 100%;
+    list-style: none;
+}
+

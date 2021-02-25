@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start" [routerLink]="['/profile']">
+      <img src="../../assets/icons/arrow-left.svg">
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <app-page-heading title="seguido por"></app-page-heading>
+    <span class="user-name-heading">
+      {{userName}}
+    </span>
+
+    <ul class="user-list">
+      <li *ngFor="let following of followingsArray">
+        <app-users-list-item [loggedUserFollowingList]="loggedUserFollowingList" [followerId]="following"></app-users-list-item>
+      </li>
+      
+    </ul>
+  </div>
+</ion-content>

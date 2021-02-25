@@ -1,0 +1,79 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.user-info .profile-picture {
+    width: 7vh;
+    height: 7vh;
+    background-color: #969696;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 7vh;
+    margin-right: 1vh;
+}
+
+.user-info-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    font-family: var(--poppins);
+}
+
+.user-name {
+    width: 100%;
+    font-weight: 500;
+    font-size: 2.5vh;
+    line-height: 3vh;
+}
+
+.user-nickname {
+    width: 100%;
+    font-weight: 300;
+    font-size: 2vh;
+    line-height: 2vh;
+    color: #969696
+}
+
+.list-item ion-button {
+    --background-activated: rgba(0,0,0,0.1);
+    width: 30vw;
+    height: 5.47vh;
+    text-transform: initial;
+    box-shadow: none;
+    font-family: var(--poppins);
+    font-size: 2.3vh;
+    font-weight: 500;
+    --box-shadow: none;
+    letter-spacing: 0.3vw;
+}
+
+#follow {
+    --background: var(--green);
+}
+
+#unfollow {
+    --background: var(--red);
+}

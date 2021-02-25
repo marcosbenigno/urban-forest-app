@@ -1,0 +1,21 @@
+<div class="comment"><!--data-comment-id-->
+  <div class="comment-header">
+     <div class="user-info">
+        <div class="profile-picture" style="background-image: url('{{comment.user_media}}');"></div>
+        <div class="user-info-data">
+           <span class="user-name">
+            {{comment ? comment.user_name : ''}}
+           </span>
+           <span class="user-nickname">
+            @{{comment ? comment.user_nickname : ''}}
+           </span>
+        </div>
+     </div>
+     <ion-button (click)="openCommentOptionsAlert()"> <!--aqui id-->
+        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+     </ion-button>
+  </div>
+  <span class="comment-text">
+    {{comment ? comment.text : ''}}
+  </span>
+</div>

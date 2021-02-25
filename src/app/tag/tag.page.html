@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start">
+      <img src="../../assets/icons/arrow-left.svg">
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <app-page-heading title="tag"></app-page-heading>
+
+    <div class="section-heading">
+      "suculentas"
+    </div>
+
+    <ion-button id="follow" *ngIf="!following">Seguir</ion-button>
+    <ion-button id="unfollow" *ngIf="following">Deixar de seguir</ion-button>
+
+    <ul class="posts-list">
+      <li>
+        <app-post></app-post>
+      </li>
+      <li>
+        <app-post></app-post>
+      </li>
+      <li>
+        <app-post></app-post>
+      </li>
+      <li>
+        <app-post></app-post>
+      </li>
+    </ul>
+  </div>
+</ion-content>

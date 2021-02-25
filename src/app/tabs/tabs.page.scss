@@ -1,0 +1,9 @@
+ion-tab-bar {
+    --background: var(--primary-color-dark);
+}
+
+ion-tab-button {
+    --color: var(--black);
+    --color-selected: var(--green);
+    font-family: var(--poppins);
+}

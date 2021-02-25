@@ -1,0 +1,82 @@
+/*single .comment*/
+.comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border-bottom: 2px solid #E1DDDD;
+}
+
+.comment-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.user-info .profile-picture {
+    width: 7vh;
+    height: 7vh;
+    background-color: #969696;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 7vh;
+    margin-right: 1vh;
+}
+
+.user-info-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    font-family: var(--poppins);
+}
+
+.user-name {
+    font-weight: 500;
+    font-size: 2.5vh;
+    line-height: 3vh;
+}
+
+.user-nickname {
+    font-weight: 300;
+    font-size: 2vh;
+    line-height: 2vh;
+    color: #969696
+}
+
+.comment-header ion-icon {
+    color: var(--green);
+}
+
+.comment-text {
+    font-family: var(--poppins);
+    font-weight: 300;
+    font-size: 2.3vh;
+    line-height: 3.4vh;
+    margin-top: 1vh;
+    width: 100%;
+}
+
+ion-button {
+    --background: none;
+    --box-shadow: none;
+    --ripple-color: transparent;
+    --background-activated: none;
+    --background-hover: none;
+}

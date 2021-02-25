@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start" [routerLink]="['/tabs/profile']">
+      <img src="../../assets/icons/arrow-left.svg">
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <app-page-heading title="opções de conta"></app-page-heading>
+
+    <form [formGroup]="accountOptionsForm" (ngSubmit)="submitAccountOptionsForm(accountOptionsForm)">
+      <div class="section-heading">
+        perfil
+      </div>
+      <label class="input-file-label" for="input-file">
+        <div class="file-select"  style="background-image: url('../../assets/picture-filter.png'), url('{{uploadedImageUrl}}');">
+          <ion-icon name="folder-outline"></ion-icon>
+        </div>
+      </label>
+      
+      <input id="input-file" (change)="handleInputFileChange($event)" type="file" accept="image/*" />
+      <ion-input placeholder="nome" formControlName="name" [(ngModel)]="userDefaultValues.name"></ion-input>
+      <ion-textarea placeholder="bio" formControlName="bio" [(ngModel)]="userDefaultValues.bio"></ion-textarea>
+      <div class="section-heading">
+        conta
+      </div>
+      <ion-input placeholder="apelido" formControlName="nickname" [(ngModel)]="userDefaultValues.nickname"></ion-input>
+      <ion-input placeholder="e-mail" formControlName="email" [(ngModel)]="userDefaultValues.email"></ion-input>
+
+      <ion-button class="submit-button" type="submit">Salvar</ion-button>
+      <ion-button class="delete-account-button">Desativar conta</ion-button>
+    </form>
+  </div>
+</ion-content>

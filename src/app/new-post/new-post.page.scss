@@ -1,0 +1,166 @@
+/*Header and toolbar*/
+ion-toolbar {
+    --background: var(--primary-color-dark);
+}
+
+ion-toolbar ion-button,
+.add-tags ion-button {
+    --background: none;
+    --box-shadow: none;
+    --ripple-color: transparent;
+    --background-activated: none;
+    --background-hover: none;
+}
+
+/*Main .container*/
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--primary-color);
+}
+
+app-page-heading {
+    height: 15vh;
+    width: 100%;
+}
+
+form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100%;
+}
+
+form ion-input,
+form ion-textarea,
+.add-tags ion-input {
+    max-height: 9vh;
+    border-radius: 1vh;
+    --background: var(--white);
+    font-family: var(--poppins);
+    font-weight: 300;
+    font-size: 2.3vh;
+    text-indent: 2vh;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+}
+
+form ion-textarea {
+    height: 70vh;
+}
+
+/*input file component*/
+#input-file {
+    display: none;
+}
+
+.input-file-label {
+    width: 100%;
+    height: 20vh;
+}
+
+.file-select {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #C4C4C4;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    border: solid var(--green) 1px;
+    color: var(--green);
+}
+
+.file-select ion-icon {
+    font-size: 4vh;
+}
+
+.file-select span {
+    font-family: var(--poppins);
+    font-size: 2.4vh;
+}
+
+/*add-tags*/
+.add-tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.add-tags ion-input {
+    width: 100%;
+}
+
+.add-tags ion-button ion-icon {
+    font-size: 4vh;
+    color: var(--green);
+}
+
+/*added-tags*/
+.added-tags {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tag {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--green);
+    font-family: var(--poppins);
+    font-size: 2vh;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    padding: 1vh;
+    margin-left: 1vh;
+    margin-bottom: 1vh;
+    border-radius: 4vh;
+}
+
+.tag span {
+    padding-left: 1vh;
+}
+
+.tag ion-icon {
+    font-size: 3vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+}
+
+.tag:first-child {
+    margin-left: 0;
+}
+
+/*button*/
+.submit-button {
+    width: 90vw;
+    height: 5.47vh;
+    text-transform: capitalize;
+    --box-shadow: none;
+    font-family: var(--poppins);
+    font-size: 2.3vh;
+    font-weight: 500;
+    letter-spacing: 0.3vw;
+    margin-top: 2vh;
+    --background: var(--green);
+    --background-activated: rgba(0,0,0,0.1);
+}

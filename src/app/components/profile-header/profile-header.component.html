@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="profile-picture" style="background-image: url('{{user.profile_picture}}')"></div>
+  <div class="profile-info">
+    <span class="user-name">{{user.name}}</span>
+    <span class="user-nickname">@{{user.nickname}}</span>
+
+    <span class="user-bio">{{user.bio}}</span>
+  </div>
+  <div class="user-stats">
+    <div class="following stats-containter" [routerLink]="['/following']">
+      <span class="stats-label">
+        seguindo
+      </span>
+      <span class="stats-value">
+        {{numberOfFollowers}}
+      </span>
+    </div>
+
+    <div class="followers stats-containter" [routerLink]="['/followed-by']">
+      <span class="stats-label">
+        seguidores
+      </span>
+      <span class="stats-value">
+        {{numberOfFollowings}}
+      </span>
+    </div>
+
+  </div>
+  <div class="profile-actions" *ngIf="!profileOwner">
+    <ion-button calss="follow" *ngIf="!following" (click)="follow()">Seguir</ion-button>
+    <ion-button calss="unfollow" *ngIf="following" (click)="unfollow()">Deixar de seguir</ion-button>
+    <ion-button>Mensagem</ion-button>
+  </div>
+  <ion-button *ngIf="profileOwner" [routerLink]="['/account-options']">Opções de conta</ion-button>
+</div>

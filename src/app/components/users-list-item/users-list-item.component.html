@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="list-item">
+     <div class="user-info">
+        <!--vs code says it's syntax error but it's not-->
+        <div class="profile-picture" style="background-image: url('{{user ? user.profile_picture : ''}}');"></div>
+        <div class="user-info-data">
+           <span class="user-name">
+           {{user ? user.name : ''}}
+           </span>
+           <span class="user-nickname">
+           @{{user ? user.nickname : ''}}
+           </span>
+        </div>
+     </div>
+     <ion-button class="follow" *ngIf="!following" (click)="follow()">Seguir</ion-button>
+     <ion-button id="unfollow" *ngIf="following" (click)="unfollow()">Deixar de seguir</ion-button>
+  </div>
+</div>

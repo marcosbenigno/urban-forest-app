@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start" [routerLink]="['/tabs/home']">
+      <img src="../../assets/icons/arrow-left.svg">
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <app-page-heading title="editar post"></app-page-heading>
+
+    <form [formGroup]="editPostForm" (ngSubmit)="submitEditPost(editPostForm)">
+
+      <ion-input type="text" placeholder="título" formControlName="title" [(ngModel)]="postDefaultValues.title"></ion-input>
+
+      <ion-textarea placeholder="texto" formControlName="text" [(ngModel)]="postDefaultValues.text"></ion-textarea>
+
+      <label  class="input-file-label" for="input-file">
+        <div class="file-select" style="background-image: url('../../assets/picture-filter.png'), url('{{uploadImage}}');">
+          <ion-icon name="folder-outline"></ion-icon>
+          <span>{{mediaStateText}}</span>
+        </div>
+      </label>
+      <input (change)="handleInputFileChange($event)" id="input-file" type="file" accept="image/*" />
+
+      <div class="add-tags">
+        <ion-input placeholder="tags" [(ngModel)]="tagValue" [ngModelOptions]="{standalone: true}"></ion-input>
+        <ion-button (click)="addTag()">
+          <ion-icon name="add-circle-outline"></ion-icon>
+        </ion-button>
+      </div>
+
+      <div class="added-tags">
+        <span class="tag" *ngFor="let tag of tags" (click)="deleteTag($event)"><span class="value-tag">{{tag}}</span> <ion-icon name="close-circle-outline"></ion-icon></span>
+      </div>
+
+      <ion-button type="submit" class="submit-button" [disabled]="editPostForm.invalid">Editar</ion-button>
+    </form>
+  </div>
+</ion-content>

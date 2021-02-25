@@ -1,0 +1,108 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    width: 100%;
+    font-family: var(--poppins);
+    color: var(--black);
+    padding-top: 5vh;
+}
+
+.container .profile-picture {
+    width: 16vh;
+    height: 16vh;
+    border-radius: 18vh;
+    background-color: #969696;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1vh;
+}
+
+.user-name {
+    font-weight: 500;
+    font-size: 5vh;
+    line-height: 5vh;
+}
+
+.user-nickname {
+    font-weight: 300;
+    font-size: 2.4vh;
+    color: #969696;
+}
+
+.user-bio {
+    font-weight: 400;
+    font-size: 2.6vh;
+    margin-top: 1vh;
+}
+
+.user-stats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-top: 2vh;
+}
+
+.stats-containter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats-label {
+    font-weight: 400;
+    font-size: 2.2vh;
+    line-height: 2.5vh;
+}
+
+.stats-value {
+    font-weight: 700;
+    font-size: 3.4vh;
+    line-height: 3.4vh;
+}
+
+ion-button {
+    --background: var(--green);
+    --background-activated: rgba(0,0,0,0.1);
+    width: 90vw;
+    height: 5.47vh;
+    text-transform: initial;
+    --box-shadow: none;
+    font-family: var(--poppins);
+    font-size: 2.3vh;
+    font-weight: 500;
+    letter-spacing: 0.3vw;
+    margin-top: 2vh;
+}
+
+#unfollow {
+    --background: var(--red) !important;
+}
+
+.profile-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-actions ion-button{
+    width: 45%;
+}

@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 10vh;
+    background-color: var(--white);
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    font-family: var(--poppins);
+    font-size: 2vh;
+    line-height: 2.4vh;
+    font-weight: 400;
+}
+
+.text {
+    width: 90%;
+}
+
+.notifications-author {
+    font-weight: 500;
+}
+
+.notification-not-seen {
+    width: 2vh;
+    height: 2vh;
+    background-color: var(--green);
+    border-radius: 2vh;
+}

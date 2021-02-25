@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar mode="ios">
+    <ion-button slot="start" [routerLink]="['/start']">
+      <img src="../../assets/icons/arrow-left.svg">
+    </ion-button>
+    <ion-title>
+    <img src="../../assets/logo-horizontal.svg" alt="logo urban forest">
+  </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <header>
+      <span class="pre-heading">Ainda não possui uma conta?</span>
+      <h1>Cadastre-se</h1>
+    </header>
+   
+      <form [formGroup]="signUpForm" (ngSubmit)="signUpNewUser(signUpForm)">
+        <ion-input type="email" placeholder="E-mail" formControlName="email"></ion-input>
+        <ion-input type="text" placeholder="Apelido" formControlName="nickname"></ion-input>
+        <div class="password-container">
+          <ion-input type="{{inputTypePassword}}" placeholder="Senha" formControlName="password"></ion-input>
+            <ion-icon name="eye-outline" slot="end" *ngIf="!viewPassword" (click)="changeViewPasswordState()"></ion-icon>
+            <ion-icon name="eye-off-outline" *ngIf="viewPassword" (click)="changeViewPasswordState()"></ion-icon>
+          </div>
+          <div class="password-container">
+            <ion-input type="{{inputTypePassword}}" placeholder="Repetir senha" formControlName="repeatPassword"></ion-input>
+              <ion-icon name="eye-outline" slot="end" *ngIf="!viewPassword" (click)="changeViewPasswordState()"></ion-icon>
+              <ion-icon name="eye-off-outline" *ngIf="viewPassword" (click)="changeViewPasswordState()"></ion-icon>
+            </div>
+
+            <ion-button type="submit" class="submit-button" [disabled]="signUpForm.invalid">Cadastrar</ion-button>
+      </form>
+    
+  </div>
+</ion-content>
