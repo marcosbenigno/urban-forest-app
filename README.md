@@ -13,7 +13,7 @@ In this project, are found the following pages: /home, /post, /full-post, /new-p
 
 ## Setup
 
-Is needed the following code before running the application:
+Is needed to install npm before running the application:
 ```console
 npm install
 ```
